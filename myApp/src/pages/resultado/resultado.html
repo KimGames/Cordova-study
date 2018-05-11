@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ResultadoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Resultado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card class="imagem-clima">
+    <img [src]="'assets/imgs/' + previsao.display + '.png'">
+    <ion-card-content>
+      <ion-card-title>
+        Previsão
+      </ion-card-title>
+      <p>
+        Cidade: {{previsao.cidade}}
+      </p>
+      <p>
+        Estado: {{previsao.estado}}
+      </p>
+      <p>
+        País: {{previsao.pais}}
+      </p>
+      <p>
+        Condição: {{previsao.condicao}}
+      </p>
+      <p>
+        Data: {{previsao.data}}
+      </p>
+      <p>
+        Temperatura Máxima: {{previsao.temp_max}}
+      </p>
+      <p>
+        Temperatura Mínima: {{previsao.temp_min}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

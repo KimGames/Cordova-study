@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ResultadoPage} from "../resultado/resultado";
 
 /**
  * Generated class for the FeedPage page.
@@ -15,8 +16,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FeedPage {
 
-  private nome_usuario: string = "Kim Ruan do código";
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -24,4 +23,16 @@ export class FeedPage {
     console.log('ionViewDidLoad FeedPage');
   }
 
+  goToResultados(){
+
+    this.navCtrl.push(ResultadoPage);
+
+    // city = city || "Digite uma cdade";
+    // state = state || "Selecione um estado";
+    //
+    // this.navCtrl.push(ClimaProvider, {
+    //   cidade_digitada: city,
+    //   estado_selecionado: state
+    // });
+  }
 }

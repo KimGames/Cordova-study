@@ -12,6 +12,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {FeedPageModule} from "../pages/feed/feed.module";
 import {IntroPageModule} from "../pages/intro/intro.module";
+import {ResultadoPageModule} from "../pages/resultado/resultado.module";
+import { ClimaProvider } from '../providers/clima/clima';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import {IntroPageModule} from "../pages/intro/intro.module";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FeedPageModule,
-    IntroPageModule
+    IntroPageModule,
+    ResultadoPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -38,7 +43,8 @@ import {IntroPageModule} from "../pages/intro/intro.module";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ClimaProvider
   ]
 })
 export class AppModule {}
