@@ -30,6 +30,8 @@ export class ResultadoPage {
     temp_min: "16,56"
   }
 
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private climaProvider: ClimaProvider) {
   }
 
