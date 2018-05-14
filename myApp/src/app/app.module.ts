@@ -15,6 +15,8 @@ import {IntroPageModule} from "../pages/intro/intro.module";
 import {ResultadoPageModule} from "../pages/resultado/resultado.module";
 import { ClimaProvider } from '../providers/clima/clima';
 import {HttpModule} from "@angular/http";
+import {NaoEncontradoPageModule} from "../pages/nao-encontrado/nao-encontrado.module";
+import {PesquisasPageModule} from "../pages/pesquisas/pesquisas.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {HttpModule} from "@angular/http";
     FeedPageModule,
     IntroPageModule,
     ResultadoPageModule,
-    HttpModule
+    HttpModule,
+    NaoEncontradoPageModule,
+    PesquisasPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
