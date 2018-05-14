@@ -31,8 +31,12 @@ export class ResultadoPage {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   nome_cidade: string;
   nome_estado: string;
+=======
+
+>>>>>>> 2ac55d64b708e178931dc363403fa7525f4ca707
 =======
 
 >>>>>>> 2ac55d64b708e178931dc363403fa7525f4ca707
