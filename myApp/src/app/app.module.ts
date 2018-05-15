@@ -18,6 +18,15 @@ import {HttpModule} from "@angular/http";
 import {NaoEncontradoPageModule} from "../pages/nao-encontrado/nao-encontrado.module";
 import {PesquisasPageModule} from "../pages/pesquisas/pesquisas.module";
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+
+import * as firebase from 'firebase';
+
+firebase.initializeApp(FIREBASE_CREDENTIALS);
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +43,11 @@ import {PesquisasPageModule} from "../pages/pesquisas/pesquisas.module";
     ResultadoPageModule,
     HttpModule,
     NaoEncontradoPageModule,
-    PesquisasPageModule
+    PesquisasPageModule,
+    // Initialise AngularFire with credientials from the dashboard
+    AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+    // Import the AngularFireDatabaseModule to use database interactions
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

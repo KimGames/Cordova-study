@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import * as firebase from "firebase";
+import {PrevisaoItem} from "../../models/previsao-item.interface";
 
 /**
  * Generated class for the PesquisasPage page.
@@ -23,13 +25,16 @@ export class PesquisasPage {
     data: "Data do Banco",
     temp_max: "Temperatura Máxima do Banco",
     temp_min: "Temperatura Mínima do Banco"
-  }
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PesquisasPage');
+    var reportRef = firebase.database().ref('/previsoes/').orderByKey();
+    reportRef.on('child_added', function(data) {
+      console.log(data.val().cidade, data.val().estado);
+    });
   }
 
 }

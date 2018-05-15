@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ClimaProvider} from "../../providers/clima/clima";
+import * as firebase from "firebase";
+import {FIREBASE_CREDENTIALS} from "../../app/firebase.credentials";
 
 /**
  * Generated class for the ResultadoPage page.
@@ -30,16 +32,10 @@ export class ResultadoPage {
     temp_min: "Sem temperatura Mínima"
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   nome_cidade: string;
   nome_estado: string;
-=======
 
->>>>>>> 2ac55d64b708e178931dc363403fa7525f4ca707
-=======
-
->>>>>>> 2ac55d64b708e178931dc363403fa7525f4ca707
+  database = firebase.database();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private climaProvider: ClimaProvider) {
     this.nome_cidade = navParams.get('cidade_digitada');
@@ -62,6 +58,18 @@ export class ResultadoPage {
         const min = ((parseFloat(objeto_retorno.query.results.channel.item.forecast[0].low) - 32) / 1.8).toPrecision(4);
         this.previsao.temp_max = String(max) + " ºC";
         this.previsao.temp_min = String(min) + " ºC";
+
+        let newPostKey = firebase.database().ref().child('previsoes').push().key;
+
+        firebase.database().ref('previsoes/' + newPostKey).update({
+          cidade: this.previsao.cidade,
+          estado: this.previsao.estado,
+          pais: this.previsao.pais,
+          condicao: this.previsao.condicao,
+          data: this.previsao.data,
+          temp_max: this.previsao.temp_max,
+          temp_min: this.previsao.temp_min
+        });
       },
       error => {
         console.log(error);

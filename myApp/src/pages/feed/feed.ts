@@ -29,7 +29,7 @@ export class FeedPage {
 
   goToResultados(){
 
-    if(this.city && this.state){
+    if(this.city){
       this.navCtrl.push(ResultadoPage, {
         cidade_digitada: this.city,
         estado_selecionado: this.state
