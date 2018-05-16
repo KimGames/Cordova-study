@@ -24,7 +24,6 @@ export class PesquisasPage {
   }
 
   ionViewDidLoad() {
-
     this.previsaoRef.on('value', itemSnapshot => {
       this.previsoes = [];
       itemSnapshot.forEach( itemSnap => {
