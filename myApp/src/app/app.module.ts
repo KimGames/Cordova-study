@@ -24,6 +24,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
 
 import * as firebase from 'firebase';
+import {Push} from "@ionic-native/push";
 
 firebase.initializeApp(FIREBASE_CREDENTIALS);
 
@@ -60,6 +61,7 @@ firebase.initializeApp(FIREBASE_CREDENTIALS);
   providers: [
     StatusBar,
     SplashScreen,
+    Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ClimaProvider
   ]

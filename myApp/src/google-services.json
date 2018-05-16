@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "246741698891",
+    "firebase_url": "https://iclima-fd261.firebaseio.com",
+    "project_id": "iclima-fd261",
+    "storage_bucket": "iclima-fd261.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246741698891:android:8946f770aec3eaa5",
+        "android_client_info": {
+          "package_name": "com.kyros.clima"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246741698891-7qhec5k8lv44mnmcmbo8k719ugj28n2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZMb3bv7lgTjB9MLVW1aoCM1W7diDZ7G0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
