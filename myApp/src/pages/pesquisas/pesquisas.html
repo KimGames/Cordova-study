@@ -15,24 +15,24 @@
 
 <ion-content padding>
 
-  <ion-card ngFor="let mensagem in mensagens">
+  <ion-card *ngFor="let previsao of previsoes">
 
     <ion-card-header>
-      {{pesquisas.cidade}}
+      {{previsao.cidade}}
     </ion-card-header>
 
     <ion-card-content>
       <p>
-        Data: {{pesquisas.data}}
+        Data: {{previsao.data}}
       </p>
       <p>
-        Condição: {{pesquisas.condicao}}
+        Condição: {{previsao.condicao}}
       </p>
       <p>
-        Temperatura Máxima: {{pesquisas.temp_max}}
+        Temperatura Máxima: {{previsao.temp_max}}
       </p>
       <p>
-        Temperatura Mínima: {{pesquisas.temp_min}}
+        Temperatura Mínima: {{previsao.temp_min}}
       </p>
     </ion-card-content>
 

@@ -22,7 +22,7 @@ import {FIREBASE_CREDENTIALS} from "../../app/firebase.credentials";
 export class ResultadoPage {
 
   previsao = {
-    display: "s",
+    display: "../../assets/imgs/Eclipse-1s-200px.svg",
     cidade: "Sem cidade",
     estado: "Sem Estado",
     pais: "Sem País",
