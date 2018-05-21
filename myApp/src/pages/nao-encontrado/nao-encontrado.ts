@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
 /**
  * Generated class for the NaoEncontradoPage page.
@@ -15,11 +15,5 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NaoEncontradoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NaoEncontradoPage');
-  }
-
+  constructor() {}
 }

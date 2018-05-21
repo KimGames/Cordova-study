@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {ResultadoPage} from "../resultado/resultado";
-import {NaoEncontradoPage} from "../nao-encontrado/nao-encontrado";
+import { IonicPage, NavController } from 'ionic-angular';
+import { ResultadoPage } from "../resultado/resultado";
+import { NaoEncontradoPage } from "../nao-encontrado/nao-encontrado";
 
 /**
  * Generated class for the FeedPage page.
@@ -20,12 +20,7 @@ export class FeedPage {
   city: string;
   state: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
-  }
+  constructor(public navCtrl: NavController) {}
 
   goToResultados(){
 

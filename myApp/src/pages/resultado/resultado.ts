@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ClimaProvider} from "../../providers/clima/clima";
 import * as firebase from "firebase";
-import {FIREBASE_CREDENTIALS} from "../../app/firebase.credentials";
 
 /**
  * Generated class for the ResultadoPage page.
